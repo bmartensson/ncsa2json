@@ -36,7 +36,7 @@ func main() {
     arr = strings.Split(log, "\"")
     var ua string = arr[5]
     var referer string = arr[3]
-    
+
     r := Request {client, url, status, size, time, method, ua, referer}
     b, _ := json.MarshalIndent(r, "", "  ")
     fmt.Println(string(b))
